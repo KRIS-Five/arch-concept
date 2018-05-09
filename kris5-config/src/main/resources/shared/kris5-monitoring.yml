@@ -1,0 +1,8 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://167.99.33.74:8761/eureka/
+
+turbine:
+  aggregator:
+    appConfig: kris5-gateway, kris5-application-service, kris5-item-service

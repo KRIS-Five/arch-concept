@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: kris5-monitoring
+  cloud:
+    config:
+      uri: http://167.99.33.74:8888
+      fail-fast: true
+      username: user
+      password: pass
+
+
+

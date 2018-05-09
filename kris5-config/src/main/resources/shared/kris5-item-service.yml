@@ -1,0 +1,24 @@
+server:
+  context-path: /item-service
+  port: 7010
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://167.99.33.74:8761/eureka/
+
+ribbon:
+  eureka:
+    preferSameZone: true
+    shouldUseDns: false
+    enabled: true
+    ReadTimeout: 20000
+    ConnectTimeout: 20000
+
+spring:
+  datasource:
+        platform: POSTGRESQL
+        driverClassName: org.postgresql.Driver
+        url: jdbc:postgresql://174.138.9.118:5432/kris5
+        username: kris5
+        password: 123Kris5Test

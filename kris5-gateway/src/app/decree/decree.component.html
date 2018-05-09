@@ -1,0 +1,84 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">Add a decree</h4>
+                        <p class="category">Add a decree for processing</p>
+                    </div>
+                    <div class="content table-responsive table-full-width">
+                        <table class="table table-hover table-striped">
+                            <thead>
+                            <tr>
+                                <th>Number of items to generate</th>
+                                <th>Generate</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="td-actions text-right">
+                                    <div class="form-group">
+                                        <input id="number_items_to_generate" type="text" value=""
+                                               placeholder="Amount to generate" class="form-control"/>
+                                    </div>
+                                </td>
+                                <td>
+                                    <button id="generate-items" class="btn btn-success" (click)="createDecree()">
+                                        Generate
+                                    </button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">Decrees</h4>
+                    </div>
+                    <div class="content table-responsive table-full-width">
+                        <table class="table table-hover table-striped">
+                            <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Created date</th>
+                                <th>Finalized date</th>
+                                <th>Status</th>
+                                <th>Number of items</th>
+                                <th>Processing time</th>
+                                <th>Statistics</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr *ngFor="let row of decrees">
+                                <td>{{row.id}}</td>
+                                <td>{{row.createDate}}</td>
+                                <td>{{row.finalizedDate}}</td>
+                                <td>{{row.status}}</td>
+                                <td>{{row.numberOfItems}}</td>
+                                <td>{{row.processingTime}}</td>
+                                <td>
+                                    <lbd-chart
+                                            [title]="'Process Statistics'"
+                                            [chartClass]="'ct-perfect-fourth'"
+                                            [chartType]=row.decreeChart.chartType
+                                            [chartData]=row.decreeChart.chartData
+                                            [legendItems]=row.decreeChart.chartLegendItems
+                                            [withHr]="false"
+                                            [footerIconClass]="'fa fa-clock-o'">
+                                    </lbd-chart>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

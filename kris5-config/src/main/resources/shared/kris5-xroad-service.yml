@@ -1,0 +1,4 @@
+server:
+  context-path: /xroad-service
+  port: 7020
+

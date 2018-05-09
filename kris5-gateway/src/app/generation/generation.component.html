@@ -1,0 +1,38 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="content table-responsive table-full-width">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Generated entity</th>
+                    <th>Number generated</th>
+                    <th>Generate</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Persons</td>
+                    <td>{{generatedData.numberOfPersons}}</td>
+                    <td class="td-actions text-right">
+                        <div class="form-group">
+                            <input id="number_persons_to_generate" type="text" value="" placeholder="Amount to generate" class="form-control" />
+                        </div>
+                        <button id="generate-persons" class="btn btn-success" (click)="generatePersons()">Generate</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Registry parts</td>
+                    <td>{{generatedData.numberOfRegistryParts}}</td>
+                    <td class="td-actions text-right">
+                        <div class="form-group">
+                            <input id="number_reg_parts_to_generate" type="text" value="" placeholder="Amount to generate" class="form-control col-md-5" />
+                        </div>
+                        <button id="generate-registry-parts" class="btn btn-success" (click)="generateRegParts()">Generate</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>

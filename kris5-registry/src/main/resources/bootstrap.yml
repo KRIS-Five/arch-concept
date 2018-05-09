@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: kris5-registry
+  cloud:
+    config:
+      uri: http://167.99.33.74:8888
+      fail-fast: true
+      username: user
+      password: pass
+
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    server:
+      waitTimeInMsWhenSyncEmpty: 0

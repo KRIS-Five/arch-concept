@@ -1,0 +1,2238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="AriregAPI" targetNamespace="http://producers.arireg.xtee.riik.ee/producer/arireg" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:typens="http://producers.arireg.xtee.riik.ee/producer/arireg" xmlns:wsdl="http://www.w3.org/ns/wsdl" xmlns:xtee="http://x-tee.riik.ee/xsd/xtee.xsd" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+  <types>
+    <xsd:schema targetNamespace="http://producers.arireg.xtee.riik.ee/producer/arireg" xmlns="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://x-tee.riik.ee/xsd/xtee.xsd" schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=xtee.xsd"/>
+      <!--listMethods-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=listMethods.xsd"/>
+      <!--detailandmed-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=detailandmed.xsd"/>
+      <!--detailandmed_v2-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=detailandmed_v2.xsd"/>
+      <!--detailandmed_v3-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=detailandmed_v3.xsd"/>
+      <!--detailandmed_v4-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=detailandmed_v4.xsd"/>
+      <!--detailandmed_v5-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=detailandmed_v5.xsd"/>
+      <!--ettevotja_dokumentide_loetelu-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=ettevotja_dokumentide_loetelu.xsd"/>
+      <!--ettevotja_muudatused tasuta riigiasutustele-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=ettevotja_muudatused_tasuta.xsd"/>
+      <!--ettevotja_muudatused tasuline-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=ettevotja_muudatused_tasuline.xsd"/>
+      <!--isikuotsing-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=seotud_isiku_otsing.xsd"/>
+      <!--klassifikaatorid-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=klassifikaatorid.xsd"/>
+      <!--lisadokumendid-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=lisadokumendid.xsd"/>
+      <!--majandusaasta_aruanded-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=majandusaasta_aruannete_kirjed.xsd"/>
+      <!--majandusaasta_aruannete loetelu-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=majandusaasta_aruannete_loetelu.xsd"/>
+      <!--menetlusinfo-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=menetlusinfo.xsd"/>
+      <!--menetlusinfo_v3-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=menetlusinfo_v3.xsd"/>
+      <!--sooritakanne-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=sooritakanne.xsd"/>
+      <!--sooritatakannev2-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=sooritakannev2.xsd"/>
+      <!--sooritakanne_v3-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=sooritakanne_v3.xsd"/>
+      <!--sooritakanne_v4-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=sooritakanne_v4.xsd"/>
+      <!--margikattetoimetatuks_v1-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=etprt_margikattetoimetatuks_v1.xsd"/>
+      <!--digiteeridokumendid_v1-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=etprt_digiteeridokumendid_v1.xsd"/>
+      <!--toimiku_dokumendid-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=toimiku_dokumendid.xsd"/>
+      <!--ariregistri_toimik-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=ariregistri_toimik.xsd"/>
+      <!--kehtiv_kommertspandi_kaart-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=kehtiv_kommertspandi_kaart.xsd"/>
+      <!--toimiku_dokument-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=toimiku_dokument.xsd"/>
+      <!--toimiku_dokument_v2-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=toimiku_dokument_v2.xsd"/>
+      <!--moka-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=moka.xsd"/>
+      <!--paringliht-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=paringliht.xsd"/>
+      <!--paringlihtv2-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=paringlihtv2.xsd"/>
+      <!--paringliht_v3-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=paringliht_v3.xsd"/>
+      <!--paringliht_v4-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=paringliht_v4.xsd"/>
+      <!--paringliht_v5-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=paringliht_v5.xsd"/>
+      <!--paringesindus-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=paringesindus.xsd"/>
+      <!--paringesindus_v2-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=paringesindus_v2.xsd"/>
+      <!--paringesindus_v3-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=paringesindus_v3.xsd"/>
+      <!--paringesindus_iseendakohta-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=paringesindus_iseendakohta.xsd"/>
+      <!--paringarikeelud-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=paringarikeelud.xsd"/>
+      <!--pohikiri-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=pohikiri.xsd"/>
+      <!--paringnimesobivus-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=paringnimesobivus.xsd"/>
+      <!--paringnimesobivus_v2-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=paringnimesobivus_v2.xsd"/>
+      <!--paringregkaardid-->
+      <!--<include schemaLocation="http://www2.rik.ee/schemas/xtee/arireg/live/paringregkaardid.xsd"/>-->
+      <!--registrikaart-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=registrikaart.xsd"/>
+      <!--mta paringud-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=mta_paringud.xsd"/>
+      <!--hk paringud-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=hk_paringud.xsd"/>
+      <!--erakonnanimekiri-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=erakonnanimekiri.xsd"/>
+      <!--erakondakuuluvus-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=erakondakuuluvus.xsd"/>
+      <!--mtategevusalad-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=mtategevusalad.xsd"/>
+      <!--mtaev_seisundid-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=mtaev_seisundid.xsd"/>
+      <!--mtabilanssv2-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=mtabilanssv2.xsd"/>
+      <!--xbrlesindus-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=xbrlesindus.xsd"/>
+      <!--xbrlesita-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=xbrlesita.xsd"/>
+      <!--xbrl_aruande_naitajad-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=xbrl_aruande_naitajad.xsd"/>
+      <!--EVK_kanded_v1-->
+      <include schemaLocation="consumer_proxy?WSDL&amp;interface=AriregBinding&amp;part=EVK_kanded_v1.xsd"/>
+    </xsd:schema>
+  </types>
+  <message name="paringesindus_v2_OutputMessage">
+    <part name="paring" type="typens:paringesindus_v2_paring">
+    </part>
+    <part name="keha" type="typens:paringesindus_v2_vastus">
+    </part>
+  </message>
+  <message name="mtamajandusaastadInputMessage">
+    <part name="keha" type="typens:mtamajandusaastad_paring">
+    </part>
+  </message>
+  <message name="mtaisikudkandesOutputMessage">
+    <part name="paring" type="typens:mtaisikudkandes_paring">
+    </part>
+    <part name="keha" type="typens:mtaisikudkandes_vastus">
+    </part>
+  </message>
+  <message name="xbrlesindusOutputMessage">
+    <part name="paring" type="typens:xbrlesindus_paring">
+    </part>
+    <part name="keha" type="typens:xbrlesindus_vastus">
+    </part>
+  </message>
+  <message name="toimiku_dokumentOutputMessage">
+    <part name="paring" type="typens:toimiku_dokumentRequest">
+    </part>
+    <part name="keha" type="typens:toimiku_dokumentVastus">
+    </part>
+  </message>
+  <message name="mtapaevikOutputMessage">
+    <part name="paring" type="typens:mtapaevik_paring">
+    </part>
+    <part name="keha" type="typens:mtapaevik_vastus">
+    </part>
+  </message>
+  <message name="mtategevusaladInputMessage">
+    <part name="keha" type="typens:mtategevusalad_paring">
+    </part>
+  </message>
+  <message name="ettevotja_muudatused_tasulineInputMessage">
+    <part name="keha" type="typens:ettevotja_muudatused_tasuline_paring">
+    </part>
+  </message>
+  <message name="erakondakuuluvusOutputMessage">
+    <part name="paring" type="typens:erakondakuuluvus_paring">
+    </part>
+    <part name="keha" type="typens:erakondakuuluvus_vastus">
+    </part>
+  </message>
+  <message name="sooritakanne_v3_InputMessage">
+    <part name="keha" type="typens:SooritaKanne_v3">
+    </part>
+  </message>
+  <message name="lisadokumendidOutputMessage">
+    <part name="paring" type="typens:lisadokumendid_paring">
+    </part>
+    <part name="keha" type="typens:lisadokumendid_vastus">
+    </part>
+  </message>
+  <message name="toimiku_dokumendidInputMessage">
+    <part name="keha" type="typens:toimiku_dokumendidRequest">
+    </part>
+  </message>
+  <message name="mtabilsisufOutputMessage">
+    <part name="paring" type="typens:mtabilsisu_paring">
+    </part>
+    <part name="keha" type="typens:mtabilsisuf_vastus">
+    </part>
+  </message>
+  <message name="mtaisikudkandesInputMessage">
+    <part name="keha" type="typens:mtaisikudkandes_paring">
+    </part>
+  </message>
+  <message name="kustutamineOutputMessage">
+    <part name="paring" type="typens:kustutamine_paring">
+    </part>
+    <part name="keha" type="typens:kustutamine_vastus">
+    </part>
+  </message>
+  <message name="xbrlesindusInputMessage">
+    <part name="keha" type="typens:xbrlesindus_paring">
+    </part>
+  </message>
+  <message name="paringlihtv2InputMessage">
+    <part name="keha" type="typens:paringlihtv2_paring">
+    </part>
+  </message>
+  <message name="menetlusinfoOutputMessage">
+    <part name="paring" type="typens:menetlusinfoRequest">
+    </part>
+    <part name="keha" type="typens:menetlusinfoVastus">
+    </part>
+  </message>
+  <message name="paringregkaardidInputMessage">
+    <part name="keha" type="typens:paringregkaardid_paring">
+    </part>
+  </message>
+  <message name="seotud_isiku_otsingInputMessage">
+    <part name="keha" type="typens:seotud_isiku_otsing_paring">
+    </part>
+  </message>
+  <message name="erakonnanimekiriOutputMessage">
+    <part name="paring" type="typens:erakonnanimekiri_paring">
+    </part>
+    <part name="keha" type="typens:erakonnanimekiri_vastus">
+    </part>
+  </message>
+  <message name="mtahoiatusedInputMessage">
+    <part name="keha" type="typens:mtahoiatused_paring">
+    </part>
+  </message>
+  <message name="mtabilanssfv2InputMessage">
+    <part name="keha" type="typens:mtabilanssv2_paring">
+    </part>
+  </message>
+  <message name="detailandmed_v4_InputMessage">
+    <part name="keha" type="typens:detailandmed_v4_Query">
+    </part>
+  </message>
+  <message name="EVK_kanded_v1_OutputMessage">
+    <part name="paring" type="typens:EVK_kanded_v1_paring">
+    </part>
+    <part name="keha" type="typens:EVK_kanded_v1_vastus">
+    </part>
+  </message>
+  <message name="xbrl_aruande_naitajadOutputMessage">
+    <part name="paring" type="typens:xbrl_aruande_naitajad_paring">
+    </part>
+    <part name="keha" type="typens:xbrl_aruande_naitajad_vastus">
+    </part>
+  </message>
+  <message name="xbrlesitaInputMessage">
+    <part name="keha" type="typens:xbrlesita_paring">
+    </part>
+  </message>
+  <message name="mtaasutajadOutputMessage">
+    <part name="paring" type="typens:mtaasutajad_paring">
+    </part>
+    <part name="keha" type="typens:mtaasutajad_vastus">
+    </part>
+  </message>
+  <message name="mtasidevahendidInputMessage">
+    <part name="keha" type="typens:mtasidevahendid_paring">
+    </part>
+  </message>
+  <message name="ariregistri_toimik_InputMessage">
+    <part name="keha" type="typens:ariregistri_toimik_Request">
+    </part>
+  </message>
+  <message name="transactionStatementResponse">
+    <part name="paring" type="typens:MokaQuery">
+    </part>
+    <part name="keha" type="typens:MokaResponse">
+    </part>
+  </message>
+  <message name="mtakapitalidInputMessage">
+    <part name="keha" type="typens:mtakapitalid_paring">
+    </part>
+  </message>
+  <message name="testSystemOutputMessage">
+  </message>
+  <message name="sooritakannev2OutputMessage">
+    <part name="paring" type="typens:SooritaKannev2">
+    </part>
+    <part name="keha" type="typens:SooritaKanneVastus">
+    </part>
+  </message>
+  <message name="mtabilsisuOutputMessage">
+    <part name="paring" type="typens:mtabilsisu_paring">
+    </part>
+    <part name="keha" type="typens:mtabilsisu_vastus">
+    </part>
+  </message>
+  <message name="detailandmedv2InputMessage">
+    <part name="keha" type="typens:detailandmedv2Query">
+    </part>
+  </message>
+  <message name="paringesindus_v2_InputMessage">
+    <part name="keha" type="typens:paringesindus_v2_paring">
+    </part>
+  </message>
+  <message name="mtaev_seisundidInputMessage">
+    <part name="keha" type="typens:mtaev_seisundid_paring">
+    </part>
+  </message>
+  <message name="ettevotja_dokumentide_loeteluOutputMessage">
+    <part name="paring" type="typens:ettevotja_dokumentide_loetelu_paring">
+    </part>
+    <part name="keha" type="typens:ettevotja_dokumentide_loetelu_vastus">
+    </part>
+  </message>
+  <message name="paringesindus_v3_OutputMessage">
+    <part name="paring" type="typens:paringesindus_v3_paring">
+    </part>
+    <part name="keha" type="typens:paringesindus_v3_vastus">
+    </part>
+  </message>
+  <message name="paringnimesobivus_v2_InputMessage">
+    <part name="keha" type="typens:paringnimesobivus_paring">
+    </part>
+  </message>
+  <message name="paringesindus_iseendakohta_InputMessage">
+    <part name="keha" type="xsd:string" xsd:nillable="true">
+    </part>
+  </message>
+  <message name="mtabilanssfv2OutputMessage">
+    <part name="paring" type="typens:mtabilanssv2_paring">
+    </part>
+    <part name="keha" type="typens:mtabilanssfv2_vastus">
+    </part>
+  </message>
+  <message name="mtaarinimedOutputMessage">
+    <part name="paring" type="typens:mtaarinimed_paring">
+    </part>
+    <part name="keha" type="typens:mtaarinimed_vastus">
+    </part>
+  </message>
+  <message name="paringesindus_iseendakohta_OutputMessage">
+    <part name="paring" type="typens:paringesindus_iseendakohta_paring">
+    </part>
+    <part name="keha" type="typens:paringesindus_iseendakohta_vastus">
+    </part>
+  </message>
+  <message name="detailandmedOutputMessage">
+    <part name="paring" type="typens:detailandmedQuery">
+    </part>
+    <part name="keha" type="typens:detailandmedVastus">
+    </part>
+  </message>
+  <message name="mtabilanssInputMessage">
+    <part name="keha" type="typens:mtabilanss_paring">
+    </part>
+  </message>
+  <message name="mtatrahvidOutputMessage">
+    <part name="paring" type="typens:mtatrahvid_paring">
+    </part>
+    <part name="keha" type="typens:mtatrahvid_vastus">
+    </part>
+  </message>
+  <message name="detailandmed_v3_OutputMessage">
+    <part name="paring" type="typens:detailandmedv2Query">
+    </part>
+    <part name="keha" type="typens:detailandmed_v3_Vastus">
+    </part>
+  </message>
+  <message name="mtasidevahendidOutputMessage">
+    <part name="paring" type="typens:mtasidevahendid_paring">
+    </part>
+    <part name="keha" type="typens:mtasidevahendid_vastus">
+    </part>
+  </message>
+  <message name="paringnimesobivusInputMessage">
+    <part name="keha" type="typens:paringnimesobivus_paring">
+    </part>
+  </message>
+  <message name="mtahoiatusedOutputMessage">
+    <part name="paring" type="typens:mtahoiatused_paring">
+    </part>
+    <part name="keha" type="typens:mtahoiatused_vastus">
+    </part>
+  </message>
+  <message name="mtabilanssv2InputMessage">
+    <part name="keha" type="typens:mtabilanssv2_paring">
+    </part>
+  </message>
+  <message name="listMethodsOutputMessage">
+    <part name="keha" type="typens:listMethodsVastus">
+    </part>
+  </message>
+  <message name="paringliht_v5_OutputMessage">
+    <part name="paring" type="typens:paringliht_v5_paring">
+    </part>
+    <part name="keha" type="typens:paringliht_v5_vastus">
+    </part>
+  </message>
+  <message name="mtamaruosadOutputMessage">
+    <part name="paring" type="typens:mtamaruosad_paring">
+    </part>
+    <part name="keha" type="typens:mtamaruosad_vastus">
+    </part>
+  </message>
+  <message name="seotud_isiku_otsingOutputMessage">
+    <part name="paring" type="typens:seotud_isiku_otsing_paring">
+    </part>
+    <part name="keha" type="typens:seotud_isiku_otsing_vastus">
+    </part>
+  </message>
+  <message name="mtapaevikInputMessage">
+    <part name="keha" type="typens:mtapaevik_paring">
+    </part>
+  </message>
+  <message name="mtakapitalidOutputMessage">
+    <part name="paring" type="typens:mtakapitalid_paring">
+    </part>
+    <part name="keha" type="typens:mtakapitalid_vastus">
+    </part>
+  </message>
+  <message name="ettevotja_muudatused_tasulineOutputMessage">
+    <part name="paring" type="typens:ettevotja_muudatused_tasuline_paring">
+    </part>
+    <part name="keha" type="typens:ettevotja_muudatused_tasuline_vastus">
+    </part>
+  </message>
+  <message name="paringarikeeludInputMessage">
+    <part name="keha" type="typens:paringarikeelud_paring">
+    </part>
+  </message>
+  <message name="sooritakanneOutputMessage">
+    <part name="paring" type="typens:SooritaKanne">
+    </part>
+    <part name="keha" type="typens:SooritaKanneVastus">
+    </part>
+  </message>
+  <message name="paringesindusInputMessage">
+    <part name="keha" type="typens:paringesindus_paring">
+    </part>
+  </message>
+  <message name="paringesindusOutputMessage">
+    <part name="paring" type="typens:paringesindus_paring">
+    </part>
+    <part name="keha" type="typens:paringesindus_vastus">
+    </part>
+  </message>
+  <message name="EVK_kanded_v1_InputMessage">
+    <part name="keha" type="typens:EVK_kanded_v1_paring">
+    </part>
+  </message>
+  <message name="xbrlesitaOutputMessage">
+    <part name="paring" type="typens:xbrlesita_paring">
+    </part>
+    <part name="keha" type="typens:xbrlesita_vastus">
+    </part>
+  </message>
+  <message name="mtamajandusaastadOutputMessage">
+    <part name="paring" type="typens:mtamajandusaastad_paring">
+    </part>
+    <part name="keha" type="typens:mtamajandusaastad_vastus">
+    </part>
+  </message>
+  <message name="klassifikaatoridInputMessage">
+    <part name="keha" type="typens:klassifikaatorid_paring">
+    </part>
+  </message>
+  <message name="paringliht_v4_InputMessage">
+    <part name="keha" type="typens:paringliht_v4_paring">
+    </part>
+  </message>
+  <message name="mtaevasukohadOutputMessage">
+    <part name="paring" type="typens:mtaevasukohad_paring">
+    </part>
+    <part name="keha" type="typens:mtaevasukohad_vastus">
+    </part>
+  </message>
+  <message name="ariregistri_toimik_OutputMessage">
+    <part name="paring" type="typens:ariregistri_toimik_Request">
+    </part>
+    <part name="keha" type="typens:ariregistri_toimik_Response">
+    </part>
+  </message>
+  <message name="mtabilanssv2OutputMessage">
+    <part name="paring" type="typens:mtabilanssv2_paring">
+    </part>
+    <part name="keha" type="typens:mtabilanssv2_vastus">
+    </part>
+  </message>
+  <message name="etprt_digiteeridokumendid_v1_OutputMessage">
+    <part name="paring" type="typens:DigiteeriDokumendidParing_v1">
+    </part>
+    <part name="keha" type="typens:DigiteeriDokumendidVastus_v1">
+    </part>
+  </message>
+  <message name="majandusaasta_aruannete_kirjedInputMessage">
+    <part name="keha" type="typens:majandusaasta_aruannete_kirjed_paring">
+    </part>
+  </message>
+  <message name="ettevotja_dokumentide_loeteluInputMessage">
+    <part name="keha" type="typens:ettevotja_dokumentide_loetelu_paring">
+    </part>
+  </message>
+  <message name="sooritakanne_v4_OutputMessage">
+    <part name="paring" type="typens:SooritaKanne_v4">
+    </part>
+    <part name="keha" type="typens:SooritaKanneVastus_v4">
+    </part>
+  </message>
+  <message name="paringliht_v3_OutputMessage">
+    <part name="paring" type="typens:paringliht_v3_paring">
+    </part>
+    <part name="keha" type="typens:paringliht_v3_vastus">
+    </part>
+  </message>
+  <message name="ettevotja_muudatused_tasutaInputMessage">
+    <part name="keha" type="typens:ettevotja_muudatused_tasuta_paring">
+    </part>
+  </message>
+  <message name="menetlusinfo_v3_OutputMessage">
+    <part name="paring" type="typens:menetlusinfo_v3_paring">
+    </part>
+    <part name="keha" type="typens:menetlusinfo_v3_vastus">
+    </part>
+  </message>
+  <message name="paringpohikiriInputMessage">
+    <part name="keha" type="typens:paringpohikiri_paring">
+    </part>
+  </message>
+  <message name="mtaasutajadInputMessage">
+    <part name="keha" type="typens:mtaasutajad_paring">
+    </part>
+  </message>
+  <message name="testSystemInputMessage">
+  </message>
+  <message name="majandusaasta_aruannete_kirjedOutputMessage">
+    <part name="paring" type="typens:majandusaasta_aruannete_kirjed_paring">
+    </part>
+    <part name="keha" type="typens:majandusaasta_aruannete_kirjed_vastus">
+    </part>
+  </message>
+  <message name="detailandmed_v5_OutputMessage">
+    <part name="paring" type="typens:detailandmed_v5_Query">
+    </part>
+    <part name="keha" type="typens:detailandmed_v5_Vastus">
+    </part>
+  </message>
+  <message name="mtaotsusedOutputMessage">
+    <part name="paring" type="typens:mtaotsused_paring">
+    </part>
+    <part name="keha" type="typens:mtaotsused_vastus">
+    </part>
+  </message>
+  <message name="etprt_margikattetoimetatuks_v1_OutputMessage">
+    <part name="paring" type="typens:MargiKattetoimetatuksParing_v1">
+    </part>
+    <part name="keha" type="typens:MargiKattetoimetatuksVastus_v1">
+    </part>
+  </message>
+  <message name="detailandmed_v5_InputMessage">
+    <part name="keha" type="typens:detailandmed_v5_Query">
+    </part>
+  </message>
+  <message name="paringpohikiriOutputMessage">
+    <part name="paring" type="typens:paringpohikiri_paring">
+    </part>
+    <part name="keha" type="typens:paringpohikiri_vastus">
+    </part>
+  </message>
+  <message name="sooritakanne_v4_InputMessage">
+    <part name="keha" type="typens:SooritaKanne_v4">
+    </part>
+  </message>
+  <message name="etprt_margikattetoimetatuks_v1_InputMessage">
+    <part name="keha" type="typens:MargiKattetoimetatuksParing_v1">
+    </part>
+  </message>
+  <message name="detailandmed_v3_InputMessage">
+    <part name="keha" type="typens:detailandmedv2Query">
+    </part>
+  </message>
+  <message name="kehtiv_kommertspandi_kaartInputMessage">
+    <part name="keha" type="typens:kehtiv_kommertspandi_kaartRequest">
+    </part>
+  </message>
+  <message name="detailandmedInputMessage">
+    <part name="keha" type="typens:detailandmedQuery">
+    </part>
+  </message>
+  <message name="toimiku_dokumentInputMessage">
+    <part name="keha" type="typens:toimiku_dokumentRequest">
+    </part>
+  </message>
+  <message name="paringlihtOutputMessage">
+    <part name="paring" type="typens:paringliht_paring">
+    </part>
+    <part name="keha" type="typens:paringliht_vastus">
+    </part>
+  </message>
+  <message name="sooritakanneInputMessage">
+    <part name="keha" type="typens:SooritaKanne">
+    </part>
+  </message>
+  <message name="sooritakanne_v3_OutputMessage">
+    <part name="paring" type="typens:SooritaKanne_v3">
+    </part>
+    <part name="keha" type="typens:SooritaKanneVastus">
+    </part>
+  </message>
+  <message name="paringarikeeludOutputMessage">
+    <part name="paring" type="typens:paringarikeelud_paring">
+    </part>
+    <part name="keha" type="typens:paringarikeelud_vastus">
+    </part>
+  </message>
+  <message name="listMethodsInputMessage">
+  </message>
+  <message name="paringliht_v3_InputMessage">
+    <part name="keha" type="typens:paringliht_v3_paring">
+    </part>
+  </message>
+  <message name="detailandmed_v4_OutputMessage">
+    <part name="paring" type="typens:detailandmed_v4_Query">
+    </part>
+    <part name="keha" type="typens:detailandmed_v4_Vastus">
+    </part>
+  </message>
+  <message name="paringliht_v5_InputMessage">
+    <part name="keha" type="typens:paringliht_v5_paring">
+    </part>
+  </message>
+  <message name="mtaotsusedInputMessage">
+    <part name="keha" type="typens:mtaotsused_paring">
+    </part>
+  </message>
+  <message name="mtatrahvidInputMessage">
+    <part name="keha" type="typens:mtatrahvid_paring">
+    </part>
+  </message>
+  <message name="mtategevusaladOutputMessage">
+    <part name="paring" type="typens:mtategevusalad_paring">
+    </part>
+    <part name="keha" type="typens:mtategevusalad_vastus">
+    </part>
+  </message>
+  <message name="mtabilanssfOutputMessage">
+    <part name="paring" type="typens:mtabilanss_paring">
+    </part>
+    <part name="keha" type="typens:mtabilanssf_vastus">
+    </part>
+  </message>
+  <message name="majandusaasta_aruannete_loeteluInputMessage">
+    <part name="keha" type="typens:majandusaasta_aruannete_loetelu_paring">
+    </part>
+  </message>
+  <message name="toimiku_dokument_v2_InputMessage">
+    <part name="keha" type="typens:toimiku_dokument_v2_Request">
+    </part>
+  </message>
+  <message name="toimiku_dokument_v2_OutputMessage">
+    <part name="paring" type="typens:toimiku_dokument_v2_Request">
+    </part>
+    <part name="keha" type="typens:toimiku_dokument_v2_Vastus">
+    </part>
+    <part name="content" type="xsd:base64Binary">
+    </part>
+  </message>
+  <message name="mtaarinimedInputMessage">
+    <part name="keha" type="typens:mtaarinimed_paring">
+    </part>
+  </message>
+  <message name="xbrl_aruande_naitajadInputMessage">
+    <part name="keha" type="typens:xbrl_aruande_naitajad_paring">
+    </part>
+  </message>
+  <message name="ettevotja_muudatused_tasutaOutputMessage">
+    <part name="paring" type="typens:ettevotja_muudatused_tasuta_paring">
+    </part>
+    <part name="keha" type="typens:ettevotja_muudatused_tasuta_vastus">
+    </part>
+  </message>
+  <message name="detailandmedv2OutputMessage">
+    <part name="paring" type="typens:detailandmedv2Query">
+    </part>
+    <part name="keha" type="typens:detailandmedv2Vastus">
+    </part>
+  </message>
+  <message name="majandusaasta_aruannete_loeteluOutputMessage">
+    <part name="paring" type="typens:majandusaasta_aruannete_loetelu_paring">
+    </part>
+    <part name="keha" type="typens:majandusaasta_aruannete_loetelu_vastus">
+    </part>
+  </message>
+  <message name="menetlusinfov2OutputMessage">
+    <part name="paring" type="typens:menetlusinfoRequest">
+    </part>
+    <part name="keha" type="typens:menetlusinfoVastus">
+    </part>
+  </message>
+  <message name="paringregkaardidOutputMessage">
+    <part name="paring" type="typens:paringregkaardid_paring">
+    </part>
+    <part name="keha" type="typens:paringregkaardid_vastus">
+    </part>
+  </message>
+  <message name="mtaev_seisundidOutputMessage">
+    <part name="paring" type="typens:mtaev_seisundid_paring">
+    </part>
+    <part name="keha" type="typens:mtaev_seisundid_vastus">
+    </part>
+  </message>
+  <message name="sooritakannev2InputMessage">
+    <part name="keha" type="typens:SooritaKannev2">
+    </part>
+  </message>
+  <message name="kehtiv_kommertspandi_kaartOutputMessage">
+    <part name="paring" type="typens:kehtiv_kommertspandi_kaartRequest">
+    </part>
+    <part name="keha" type="typens:kehtiv_kommertspandi_kaartVastus">
+    </part>
+  </message>
+  <message name="registrikaartOutputMessage">
+    <part name="paring" type="typens:registrikaart_paring">
+    </part>
+    <part name="keha" type="typens:registrikaart_vastus">
+    </part>
+  </message>
+  <message name="mtabilsisuInputMessage">
+    <part name="keha" type="typens:mtabilsisu_paring">
+    </part>
+  </message>
+  <message name="mtaevasukohadInputMessage">
+    <part name="keha" type="typens:mtaevasukohad_paring">
+    </part>
+  </message>
+  <message name="mtamajpaevikOutputMessage">
+    <part name="paring" type="typens:mtamajpaevik_paring">
+    </part>
+    <part name="keha" type="typens:mtamajpaevik_vastus">
+    </part>
+  </message>
+  <message name="mtabilanssOutputMessage">
+    <part name="paring" type="typens:mtabilanss_paring">
+    </part>
+    <part name="keha" type="typens:mtabilanss_vastus">
+    </part>
+  </message>
+  <message name="mtamaruosadInputMessage">
+    <part name="keha" type="typens:mtamaruosad_paring">
+    </part>
+  </message>
+  <message name="mtabilsisufInputMessage">
+    <part name="keha" type="typens:mtabilsisu_paring">
+    </part>
+  </message>
+  <message name="paringnimesobivusOutputMessage">
+    <part name="paring" type="typens:paringnimesobivus_paring">
+    </part>
+    <part name="keha" type="typens:paringnimesobivus_vastus">
+    </part>
+  </message>
+  <message name="toimiku_dokumendidOutputMessage">
+    <part name="paring" type="typens:toimiku_dokumendidRequest">
+    </part>
+    <part name="keha" type="typens:toimiku_dokumendidVastus">
+    </part>
+  </message>
+  <message name="paringnimesobivus_v2_OutputMessage">
+    <part name="paring" type="typens:paringnimesobivus_paring">
+    </part>
+    <part name="keha" type="typens:paringnimesobivus_v2_vastus">
+    </part>
+  </message>
+  <message name="menetlusinfo_v3_InputMessage">
+    <part name="keha" type="typens:menetlusinfo_v3_paring">
+    </part>
+  </message>
+  <message name="registrikaartInputMessage">
+    <part name="keha" type="typens:registrikaart_paring">
+    </part>
+  </message>
+  <message name="erakonnanimekiriInputMessage">
+    <part name="keha" type="typens:erakonnanimekiri_paring">
+    </part>
+  </message>
+  <message name="paringesindus_v3_InputMessage">
+    <part name="keha" type="typens:paringesindus_v3_paring">
+    </part>
+  </message>
+  <message name="etprt_digiteeridokumendid_v1_InputMessage">
+    <part name="keha" type="typens:DigiteeriDokumendidParing_v1">
+    </part>
+  </message>
+  <message name="transactionStatementRequest">
+    <part name="keha" type="typens:MokaQuery">
+    </part>
+  </message>
+  <message name="klassifikaatoridOutputMessage">
+    <part name="paring" type="typens:klassifikaatorid_paring">
+    </part>
+    <part name="keha" type="typens:klassifikaatorid_vastus">
+    </part>
+  </message>
+  <message name="paringlihtInputMessage">
+    <part name="keha" type="typens:paringliht_paring">
+    </part>
+  </message>
+  <message name="mtabilanssfInputMessage">
+    <part name="keha" type="typens:mtabilanss_paring">
+    </part>
+  </message>
+  <message name="menetlusinfoInputMessage">
+    <part name="keha" type="typens:menetlusinfoRequest">
+    </part>
+  </message>
+  <message name="mtamajpaevikInputMessage">
+    <part name="keha" type="typens:mtamajpaevik_paring">
+    </part>
+  </message>
+  <message name="menetlusinfov2InputMessage">
+    <part name="keha" type="typens:menetlusinfoRequest">
+    </part>
+  </message>
+  <message name="paringliht_v4_OutputMessage">
+    <part name="paring" type="typens:paringliht_v4_paring">
+    </part>
+    <part name="keha" type="typens:paringliht_v4_vastus">
+    </part>
+  </message>
+  <message name="kustutamineInputMessage">
+    <part name="keha" type="typens:kustutamine_paring">
+    </part>
+  </message>
+  <message name="lisadokumendidInputMessage">
+    <part name="keha" type="typens:lisadokumendid_paring">
+    </part>
+  </message>
+  <message name="erakondakuuluvusInputMessage">
+    <part name="keha" type="typens:erakondakuuluvus_paring">
+    </part>
+  </message>
+  <message name="paringlihtv2OutputMessage">
+    <part name="paring" type="typens:paringlihtv2_paring">
+    </part>
+    <part name="keha" type="typens:paringlihtv2_vastus">
+    </part>
+  </message>
+  <portType name="AriregPort">
+    <operation name="listMethods">
+<documentation>
+        <xtee:title>Teenuste nimekiri</xtee:title>
+      </documentation>
+      <input message="typens:listMethodsInputMessage">
+    </input>
+      <output message="typens:listMethodsOutputMessage">
+    </output>
+    </operation>
+    <operation name="testSystem">
+<documentation>
+        <xtee:title>Adapteri test</xtee:title>
+      </documentation>
+      <input message="typens:testSystemInputMessage">
+    </input>
+      <output message="typens:testSystemOutputMessage">
+    </output>
+    </operation>
+    <operation name="ettevotja_dokumentide_loetelu">
+<documentation>
+        <xtee:title>Ettevõtjaga seotud dokumentide loetelu päring</xtee:title>
+      </documentation>
+      <input message="typens:ettevotja_dokumentide_loeteluInputMessage">
+    </input>
+      <output message="typens:ettevotja_dokumentide_loeteluOutputMessage">
+    </output>
+    </operation>
+    <operation name="ettevotja_muudatused_tasuta">
+<documentation>
+        <xtee:title>Ettevõtja muudatuste loetelu riigiasutustele päring</xtee:title>
+      </documentation>
+      <input message="typens:ettevotja_muudatused_tasutaInputMessage">
+    </input>
+      <output message="typens:ettevotja_muudatused_tasutaOutputMessage">
+    </output>
+    </operation>
+    <operation name="ettevotja_muudatused_tasuline">
+<documentation>
+        <xtee:title>Ettevõtja muudatuste loetelu tasuline päring</xtee:title>
+      </documentation>
+      <input message="typens:ettevotja_muudatused_tasulineInputMessage">
+    </input>
+      <output message="typens:ettevotja_muudatused_tasulineOutputMessage">
+    </output>
+    </operation>
+    <operation name="seotud_isiku_otsing">
+<documentation>
+        <xtee:title>Isikute otsing</xtee:title>
+      </documentation>
+      <input message="typens:seotud_isiku_otsingInputMessage">
+    </input>
+      <output message="typens:seotud_isiku_otsingOutputMessage">
+    </output>
+    </operation>
+    <operation name="klassifikaatorid">
+<documentation>
+        <xtee:title>Klassifikaatorite päring</xtee:title>
+      </documentation>
+      <input message="typens:klassifikaatoridInputMessage">
+    </input>
+      <output message="typens:klassifikaatoridOutputMessage">
+    </output>
+    </operation>
+    <operation name="lisadokumendid">
+<documentation>
+        <xtee:title>Lisadokumentide esitamise päring</xtee:title>
+      </documentation>
+      <input message="typens:lisadokumendidInputMessage">
+    </input>
+      <output message="typens:lisadokumendidOutputMessage">
+    </output>
+    </operation>
+    <operation name="majandusaasta_aruannete_kirjed">
+<documentation>
+        <xtee:title>Ettevõtja majandusaasta aruande päring</xtee:title>
+      </documentation>
+      <input message="typens:majandusaasta_aruannete_kirjedInputMessage">
+    </input>
+      <output message="typens:majandusaasta_aruannete_kirjedOutputMessage">
+    </output>
+    </operation>
+    <operation name="majandusaasta_aruannete_loetelu">
+<documentation>
+        <xtee:title>Ettevõtja majandusaasta aruande loetelu päring</xtee:title>
+      </documentation>
+      <input message="typens:majandusaasta_aruannete_loeteluInputMessage">
+    </input>
+      <output message="typens:majandusaasta_aruannete_loeteluOutputMessage">
+    </output>
+    </operation>
+    <operation name="menetlusinfo">
+<documentation>
+        <xtee:title>E-notar: Menetlusinfo päring</xtee:title>
+      </documentation>
+      <input message="typens:menetlusinfoInputMessage">
+    </input>
+      <output message="typens:menetlusinfoOutputMessage">
+    </output>
+    </operation>
+    <operation name="menetlusinfov2">
+<documentation>
+        <xtee:title>E-notar: Menetlusinfo päring v2</xtee:title>
+      </documentation>
+      <input message="typens:menetlusinfov2InputMessage">
+    </input>
+      <output message="typens:menetlusinfov2OutputMessage">
+    </output>
+    </operation>
+    <operation name="menetlusinfo_v3">
+<documentation>
+        <xtee:title>E-notar: Menetlusinfo päring v3</xtee:title>
+      </documentation>
+      <input message="typens:menetlusinfo_v3_InputMessage">
+    </input>
+      <output message="typens:menetlusinfo_v3_OutputMessage">
+    </output>
+    </operation>
+    <operation name="sooritakanne">
+<documentation>
+        <xtee:title>E-notar: Kannete sooritamise päring</xtee:title>
+      </documentation>
+      <input message="typens:sooritakanneInputMessage">
+    </input>
+      <output message="typens:sooritakanneOutputMessage">
+    </output>
+    </operation>
+    <operation name="sooritakannev2">
+<documentation>
+        <xtee:title>E-notar: Kannete sooritamise päring v2</xtee:title>
+      </documentation>
+      <input message="typens:sooritakannev2InputMessage">
+    </input>
+      <output message="typens:sooritakannev2OutputMessage">
+    </output>
+    </operation>
+    <operation name="sooritakanne_v3">
+<documentation>
+        <xtee:title>E-notar: Kannete sooritamise päring v3</xtee:title>
+      </documentation>
+      <input message="typens:sooritakanne_v3_InputMessage">
+    </input>
+      <output message="typens:sooritakanne_v3_OutputMessage">
+    </output>
+    </operation>
+    <operation name="sooritakanne_v4">
+<documentation>
+        <xtee:title>Avalduse esitamise päring v4, kasutavad e-notar ja ettevõtjaportaal</xtee:title>
+      </documentation>
+      <input message="typens:sooritakanne_v4_InputMessage">
+    </input>
+      <output message="typens:sooritakanne_v4_OutputMessage">
+    </output>
+    </operation>
+    <operation name="etprt_margikattetoimetatuks_v1">
+<documentation>
+        <xtee:title>Määruse kättetoimetatuks märkimine, kasutab ettevõtjaportaal</xtee:title>
+      </documentation>
+      <input message="typens:etprt_margikattetoimetatuks_v1_InputMessage">
+    </input>
+      <output message="typens:etprt_margikattetoimetatuks_v1_OutputMessage">
+    </output>
+    </operation>
+    <operation name="etprt_digiteeridokumendid_v1">
+<documentation>
+        <xtee:title>Dokumendi digiteerimise tellimus, kasutab ettevõtjaportaal</xtee:title>
+      </documentation>
+      <input message="typens:etprt_digiteeridokumendid_v1_InputMessage">
+    </input>
+      <output message="typens:etprt_digiteeridokumendid_v1_OutputMessage">
+    </output>
+    </operation>
+    <operation name="transactionStatement">
+<documentation>
+        <xtee:title>Riigikassa kiirteavitusteenus</xtee:title>
+      </documentation>
+      <input message="typens:transactionStatementRequest">
+    </input>
+      <output message="typens:transactionStatementResponse">
+    </output>
+    </operation>
+    <operation name="detailandmed">
+<documentation>
+        <xtee:title>Ettevõtja detailandmete päring</xtee:title>
+      </documentation>
+      <input message="typens:detailandmedInputMessage">
+    </input>
+      <output message="typens:detailandmedOutputMessage">
+    </output>
+    </operation>
+    <operation name="detailandmedv2">
+<documentation>
+        <xtee:title>Ettevõtja detailandmete päring v2</xtee:title>
+      </documentation>
+      <input message="typens:detailandmedv2InputMessage">
+    </input>
+      <output message="typens:detailandmedv2OutputMessage">
+    </output>
+    </operation>
+    <operation name="detailandmed_v3">
+<documentation>
+        <xtee:title>Ettevõtja detailandmete päring v3</xtee:title>
+      </documentation>
+      <input message="typens:detailandmed_v3_InputMessage">
+    </input>
+      <output message="typens:detailandmed_v3_OutputMessage">
+    </output>
+    </operation>
+    <operation name="detailandmed_v4">
+<documentation>
+        <xtee:title>Ettevõtja detailandmete päring v4</xtee:title>
+      </documentation>
+      <input message="typens:detailandmed_v4_InputMessage">
+    </input>
+      <output message="typens:detailandmed_v4_OutputMessage">
+    </output>
+    </operation>
+    <operation name="detailandmed_v5">
+<documentation>
+        <xtee:title>Ettevõtja detailandmete päring v5</xtee:title>
+      </documentation>
+      <input message="typens:detailandmed_v5_InputMessage">
+    </input>
+      <output message="typens:detailandmed_v5_OutputMessage">
+    </output>
+    </operation>
+    <operation name="toimiku_dokumendid">
+<documentation>
+        <xtee:title>E-notar: toimiku dokumendid</xtee:title>
+      </documentation>
+      <input message="typens:toimiku_dokumendidInputMessage">
+    </input>
+      <output message="typens:toimiku_dokumendidOutputMessage">
+    </output>
+    </operation>
+    <operation name="ariregistri_toimik">
+<documentation>
+        <xtee:title>Äriregistri toimiku päring</xtee:title>
+      </documentation>
+      <input message="typens:ariregistri_toimik_InputMessage">
+    </input>
+      <output message="typens:ariregistri_toimik_OutputMessage">
+    </output>
+    </operation>
+    <operation name="kehtiv_kommertspandi_kaart">
+<documentation>
+        <xtee:title>Kommertspandiregistri kaardi väljatrükk</xtee:title>
+      </documentation>
+      <input message="typens:kehtiv_kommertspandi_kaartInputMessage">
+    </input>
+      <output message="typens:kehtiv_kommertspandi_kaartOutputMessage">
+    </output>
+    </operation>
+    <operation name="toimiku_dokument">
+<documentation>
+        <xtee:title>E-notar: toimiku dokumendi sisu</xtee:title>
+      </documentation>
+      <input message="typens:toimiku_dokumentInputMessage">
+    </input>
+      <output message="typens:toimiku_dokumentOutputMessage">
+    </output>
+    </operation>
+    <operation name="toimiku_dokument_v2">
+<documentation>
+        <xtee:title>Toimiku dokumendi sisu</xtee:title>
+      </documentation>
+      <input message="typens:toimiku_dokument_v2_InputMessage">
+    </input>
+      <output message="typens:toimiku_dokument_v2_OutputMessage">
+    </output>
+    </operation>
+    <operation name="paringliht">
+<documentation>
+        <xtee:title>Ettevõtja lihtandmete päring</xtee:title>
+      </documentation>
+      <input message="typens:paringlihtInputMessage">
+    </input>
+      <output message="typens:paringlihtOutputMessage">
+    </output>
+    </operation>
+    <operation name="paringlihtv2">
+<documentation>
+        <xtee:title>Ettevõtja lihtandmete päring v2</xtee:title>
+      </documentation>
+      <input message="typens:paringlihtv2InputMessage">
+    </input>
+      <output message="typens:paringlihtv2OutputMessage">
+    </output>
+    </operation>
+    <operation name="paringliht_v3">
+<documentation>
+        <xtee:title>Ettevõtja lihtandmete päring v3</xtee:title>
+      </documentation>
+      <input message="typens:paringliht_v3_InputMessage">
+    </input>
+      <output message="typens:paringliht_v3_OutputMessage">
+    </output>
+    </operation>
+    <operation name="paringliht_v4">
+<documentation>
+        <xtee:title>Ettevõtja lihtandmete päring v4</xtee:title>
+      </documentation>
+      <input message="typens:paringliht_v4_InputMessage">
+    </input>
+      <output message="typens:paringliht_v4_OutputMessage">
+    </output>
+    </operation>
+    <operation name="paringliht_v5">
+<documentation>
+        <xtee:title>Ettevõtja lihtandmete päring v5</xtee:title>
+      </documentation>
+      <input message="typens:paringliht_v5_InputMessage">
+    </input>
+      <output message="typens:paringliht_v5_OutputMessage">
+    </output>
+    </operation>
+    <operation name="paringesindus">
+<documentation>
+        <xtee:title>Esindusõiguste päring</xtee:title>
+      </documentation>
+      <input message="typens:paringesindusInputMessage">
+    </input>
+      <output message="typens:paringesindusOutputMessage">
+    </output>
+    </operation>
+    <operation name="paringesindus_v2">
+<documentation>
+        <xtee:title>Esindusõiguste päring v2</xtee:title>
+      </documentation>
+      <input message="typens:paringesindus_v2_InputMessage">
+    </input>
+      <output message="typens:paringesindus_v2_OutputMessage">
+    </output>
+    </operation>
+    <operation name="paringesindus_v3">
+<documentation>
+        <xtee:title>Esindusõiguste päring v3</xtee:title>
+      </documentation>
+      <input message="typens:paringesindus_v3_InputMessage">
+    </input>
+      <output message="typens:paringesindus_v3_OutputMessage">
+    </output>
+    </operation>
+    <operation name="paringesindus_iseendakohta">
+<documentation>
+        <xtee:title>Esindusõiguste päring iseenda kohta</xtee:title>
+      </documentation>
+      <input message="typens:paringesindus_iseendakohta_InputMessage">
+    </input>
+      <output message="typens:paringesindus_iseendakohta_OutputMessage">
+    </output>
+    </operation>
+    <operation name="xbrlesindus">
+<documentation>
+        <xtee:title>XBRL portaali jaoks esindusõiguste päring</xtee:title>
+      </documentation>
+      <input message="typens:xbrlesindusInputMessage">
+    </input>
+      <output message="typens:xbrlesindusOutputMessage">
+    </output>
+    </operation>
+    <operation name="xbrlesita">
+<documentation>
+        <xtee:title>XBRL portaali jaoks aruandme esitamine Äriregistrisse</xtee:title>
+      </documentation>
+      <input message="typens:xbrlesitaInputMessage">
+    </input>
+      <output message="typens:xbrlesitaOutputMessage">
+    </output>
+    </operation>
+    <operation name="paringarikeelud">
+<documentation>
+        <xtee:title>Arikeeldude paring</xtee:title>
+      </documentation>
+      <input message="typens:paringarikeeludInputMessage">
+    </input>
+      <output message="typens:paringarikeeludOutputMessage">
+    </output>
+    </operation>
+    <operation name="pohikiri">
+<documentation>
+        <xtee:title>Põhikiri PDF dokumendina</xtee:title>
+      </documentation>
+      <input message="typens:paringpohikiriInputMessage">
+    </input>
+      <output message="typens:paringpohikiriOutputMessage">
+    </output>
+    </operation>
+    <operation name="paringnimesobivus">
+<documentation>
+        <xtee:title>Nimesobivuse paring</xtee:title>
+      </documentation>
+      <input message="typens:paringnimesobivusInputMessage">
+    </input>
+      <output message="typens:paringnimesobivusOutputMessage">
+    </output>
+    </operation>
+    <operation name="paringnimesobivus_v2">
+<documentation>
+        <xtee:title>Nimesobivuse paring</xtee:title>
+      </documentation>
+      <input message="typens:paringnimesobivus_v2_InputMessage">
+    </input>
+      <output message="typens:paringnimesobivus_v2_OutputMessage">
+    </output>
+    </operation>
+    <operation name="paringregkaardid">
+<documentation>
+        <xtee:title>Ettevõtja registrikaardi väljatrükk</xtee:title>
+      </documentation>
+      <input message="typens:paringregkaardidInputMessage">
+    </input>
+      <output message="typens:paringregkaardidOutputMessage">
+    </output>
+    </operation>
+    <operation name="registrikaart">
+<documentation>
+        <xtee:title>Ettevõtja registrikaardi ja kommertspandi registrikaardi väljatrükk</xtee:title>
+      </documentation>
+      <input message="typens:registrikaartInputMessage">
+    </input>
+      <output message="typens:registrikaartOutputMessage">
+    </output>
+    </operation>
+    <operation name="mtaarinimed">
+<documentation>
+        <xtee:title>MTA: mtaarinimed</xtee:title>
+      </documentation>
+      <input message="typens:mtaarinimedInputMessage">
+    </input>
+      <output message="typens:mtaarinimedOutputMessage">
+    </output>
+    </operation>
+    <operation name="mtaasutajad">
+<documentation>
+        <xtee:title>MTA: mtaasutajad</xtee:title>
+      </documentation>
+      <input message="typens:mtaasutajadInputMessage">
+    </input>
+      <output message="typens:mtaasutajadOutputMessage">
+    </output>
+    </operation>
+    <operation name="mtabilanss">
+<documentation>
+        <xtee:title>MTA: mtabilanss</xtee:title>
+      </documentation>
+      <input message="typens:mtabilanssInputMessage">
+    </input>
+      <output message="typens:mtabilanssOutputMessage">
+    </output>
+    </operation>
+    <operation name="mtabilanssf">
+<documentation>
+        <xtee:title>MTA: mtabilanssf</xtee:title>
+      </documentation>
+      <input message="typens:mtabilanssfInputMessage">
+    </input>
+      <output message="typens:mtabilanssfOutputMessage">
+    </output>
+    </operation>
+    <operation name="mtabilsisu">
+<documentation>
+        <xtee:title>MTA: mtabilsisu</xtee:title>
+      </documentation>
+      <input message="typens:mtabilsisuInputMessage">
+    </input>
+      <output message="typens:mtabilsisuOutputMessage">
+    </output>
+    </operation>
+    <operation name="mtabilsisuf">
+<documentation>
+        <xtee:title>MTA: mtabilsisuf</xtee:title>
+      </documentation>
+      <input message="typens:mtabilsisufInputMessage">
+    </input>
+      <output message="typens:mtabilsisufOutputMessage">
+    </output>
+    </operation>
+    <operation name="mtaevasukohad">
+<documentation>
+        <xtee:title>MTA: mtaevasukohad</xtee:title>
+      </documentation>
+      <input message="typens:mtaevasukohadInputMessage">
+    </input>
+      <output message="typens:mtaevasukohadOutputMessage">
+    </output>
+    </operation>
+    <operation name="mtahoiatused">
+<documentation>
+        <xtee:title>MTA: mtahoiatused</xtee:title>
+      </documentation>
+      <input message="typens:mtahoiatusedInputMessage">
+    </input>
+      <output message="typens:mtahoiatusedOutputMessage">
+    </output>
+    </operation>
+    <operation name="mtaisikudkandes">
+<documentation>
+        <xtee:title>MTA: mtaisikudkandes</xtee:title>
+      </documentation>
+      <input message="typens:mtaisikudkandesInputMessage">
+    </input>
+      <output message="typens:mtaisikudkandesOutputMessage">
+    </output>
+    </operation>
+    <operation name="mtakapitalid">
+<documentation>
+        <xtee:title>MTA: mtakapitalid</xtee:title>
+      </documentation>
+      <input message="typens:mtakapitalidInputMessage">
+    </input>
+      <output message="typens:mtakapitalidOutputMessage">
+    </output>
+    </operation>
+    <operation name="mtamajandusaastad">
+<documentation>
+        <xtee:title>MTA: mtamajandusaastad</xtee:title>
+      </documentation>
+      <input message="typens:mtamajandusaastadInputMessage">
+    </input>
+      <output message="typens:mtamajandusaastadOutputMessage">
+    </output>
+    </operation>
+    <operation name="mtamajpaevik">
+<documentation>
+        <xtee:title>MTA: mtamajpaevik</xtee:title>
+      </documentation>
+      <input message="typens:mtamajpaevikInputMessage">
+    </input>
+      <output message="typens:mtamajpaevikOutputMessage">
+    </output>
+    </operation>
+    <operation name="mtamaruosad">
+<documentation>
+        <xtee:title>MTA: mtamaruosad</xtee:title>
+      </documentation>
+      <input message="typens:mtamaruosadInputMessage">
+    </input>
+      <output message="typens:mtamaruosadOutputMessage">
+    </output>
+    </operation>
+    <operation name="mtaotsused">
+<documentation>
+        <xtee:title>MTA: mtaotsused</xtee:title>
+      </documentation>
+      <input message="typens:mtaotsusedInputMessage">
+    </input>
+      <output message="typens:mtaotsusedOutputMessage">
+    </output>
+    </operation>
+    <operation name="mtapaevik">
+<documentation>
+        <xtee:title>MTA: mtapaevik</xtee:title>
+      </documentation>
+      <input message="typens:mtapaevikInputMessage">
+    </input>
+      <output message="typens:mtapaevikOutputMessage">
+    </output>
+    </operation>
+    <operation name="mtasidevahendid">
+<documentation>
+        <xtee:title>MTA: mtasidevahendid</xtee:title>
+      </documentation>
+      <input message="typens:mtasidevahendidInputMessage">
+    </input>
+      <output message="typens:mtasidevahendidOutputMessage">
+    </output>
+    </operation>
+    <operation name="mtatrahvid">
+<documentation>
+        <xtee:title>MTA: mtatrahvid</xtee:title>
+      </documentation>
+      <input message="typens:mtatrahvidInputMessage">
+    </input>
+      <output message="typens:mtatrahvidOutputMessage">
+    </output>
+    </operation>
+    <operation name="kustutamine">
+<documentation>
+        <xtee:title>EHK: Kustutamise päring</xtee:title>
+      </documentation>
+      <input message="typens:kustutamineInputMessage">
+    </input>
+      <output message="typens:kustutamineOutputMessage">
+    </output>
+    </operation>
+    <operation name="erakonnanimekiri">
+<documentation>
+        <xtee:title>Erakonnanimekirja päring</xtee:title>
+      </documentation>
+      <input message="typens:erakonnanimekiriInputMessage">
+    </input>
+      <output message="typens:erakonnanimekiriOutputMessage">
+    </output>
+    </operation>
+    <operation name="erakondakuuluvus">
+<documentation>
+        <xtee:title>Erakonda kuuluvuse päring</xtee:title>
+      </documentation>
+      <input message="typens:erakondakuuluvusInputMessage">
+    </input>
+      <output message="typens:erakondakuuluvusOutputMessage">
+    </output>
+    </operation>
+    <operation name="mtategevusalad">
+<documentation>
+        <xtee:title>MTA: mtategevusalad</xtee:title>
+      </documentation>
+      <input message="typens:mtategevusaladInputMessage">
+    </input>
+      <output message="typens:mtategevusaladOutputMessage">
+    </output>
+    </operation>
+    <operation name="mtaev_seisundid">
+<documentation>
+        <xtee:title>MTA: mtaev_seisundid</xtee:title>
+      </documentation>
+      <input message="typens:mtaev_seisundidInputMessage">
+    </input>
+      <output message="typens:mtaev_seisundidOutputMessage">
+    </output>
+    </operation>
+    <operation name="mtabilanssv2">
+<documentation>
+        <xtee:title>MTA: mtabilanss v2</xtee:title>
+      </documentation>
+      <input message="typens:mtabilanssv2InputMessage">
+    </input>
+      <output message="typens:mtabilanssv2OutputMessage">
+    </output>
+    </operation>
+    <operation name="mtabilanssfv2">
+<documentation>
+        <xtee:title>MTA: mtabilanssf v2</xtee:title>
+      </documentation>
+      <input message="typens:mtabilanssfv2InputMessage">
+    </input>
+      <output message="typens:mtabilanssfv2OutputMessage">
+    </output>
+    </operation>
+    <operation name="xbrl_aruande_naitajad">
+<documentation>
+        <xtee:title>XBRL aruande vormide veergude väärtused</xtee:title>
+      </documentation>
+      <input message="typens:xbrl_aruande_naitajadInputMessage">
+    </input>
+      <output message="typens:xbrl_aruande_naitajadOutputMessage">
+    </output>
+    </operation>
+    <operation name="EVK_kanded_v1">
+<documentation>
+        <xtee:title>EVK märkega aktsiaseltside ja osaühingute muutunud kandeandmed etteantud ajavahemikul</xtee:title>
+      </documentation>
+      <input message="typens:EVK_kanded_v1_InputMessage">
+    </input>
+      <output message="typens:EVK_kanded_v1_OutputMessage">
+    </output>
+    </operation>
+  </portType>
+  <binding name="AriregBinding" type="typens:AriregPort">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="listMethods">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://x-tee.riik.ee/xsd/xtee.xsd"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://x-tee.riik.ee/xsd/xtee.xsd"/>
+      </output>
+    </operation>
+    <operation name="testSystem">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal" namespace="http://x-rd.net/xsd/xroad.xsd"/>
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://x-rd.net/xsd/xroad.xsd"/>
+      </output>
+    </operation>
+    <operation name="majandusaasta_aruannete_kirjed">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="majandusaasta_aruannete_loetelu">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="ettevotja_dokumentide_loetelu">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="ettevotja_muudatused_tasuta">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="ettevotja_muudatused_tasuline">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="seotud_isiku_otsing">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="klassifikaatorid">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="lisadokumendid">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="menetlusinfo">
+    <xtee:version>v2</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="menetlusinfov2">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="menetlusinfo_v3">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="sooritakanne">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="sooritakannev2">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="sooritakanne_v3">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="sooritakanne_v4">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="etprt_margikattetoimetatuks_v1">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="etprt_digiteeridokumendid_v1">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="transactionStatement">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="detailandmed">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="detailandmedv2">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="detailandmed_v3">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="detailandmed_v4">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="detailandmed_v5">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="toimiku_dokumendid">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="ariregistri_toimik">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="kehtiv_kommertspandi_kaart">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="toimiku_dokument">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="toimiku_dokument_v2">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+        <mime:content part="content" type="application/octet-stream"/>
+      </output>
+    </operation>
+    <operation name="paringliht">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="paringlihtv2">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="paringliht_v3">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="paringliht_v4">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="paringliht_v5">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="paringesindus">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="paringesindus_v2">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="paringesindus_v3">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="paringesindus_iseendakohta">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="xbrlesindus">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="xbrlesita">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="paringarikeelud">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="pohikiri">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="paringnimesobivus">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="paringnimesobivus_v2">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="paringregkaardid">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="registrikaart">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="mtaarinimed">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="mtaasutajad">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="mtabilanss">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="mtabilanssf">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="mtabilsisu">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="mtabilsisuf">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="mtaevasukohad">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="mtahoiatused">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="mtaisikudkandes">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="mtakapitalid">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="mtamajandusaastad">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="mtamajpaevik">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="mtamaruosad">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="mtaotsused">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="mtapaevik">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="mtasidevahendid">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="mtatrahvid">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="kustutamine">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="erakonnanimekiri">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="erakondakuuluvus">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="mtategevusalad">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="mtaev_seisundid">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="mtabilanssv2">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="mtabilanssfv2">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="EVK_kanded_v1">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+    <operation name="xbrl_aruande_naitajad">
+    <xtee:version>v1</xtee:version>
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://producers.arireg.xtee.riik.ee/producer/arireg"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="arireg">
+    <port name="AriregPort" binding="typens:AriregBinding">
+      <soap:address location="http://localhost:8088/cgi-bin/consumer_proxy"/>
+    <xtee:title>Äriregister_uus</xtee:title>
+    <xtee:address producer="arireg"/>
+    </port>
+  </service>
+</definitions>

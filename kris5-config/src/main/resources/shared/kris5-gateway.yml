@@ -1,0 +1,48 @@
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: false
+
+ribbon:
+  eureka:
+    preferSameZone: true
+    shouldUseDns: false
+    enabled: true
+    ConnectTimeout: 120000
+    ReadTimeout: 120000
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://167.99.33.74:8761/eureka/
+
+zuul:
+  ignoredServices: '*'
+  host:
+    connect-timeout-millis: 60000
+    socket-timeout-millis: 60000
+
+  routes:
+    kris5-application-service:
+      path: /application-service/**
+      serviceId: kris5-application-service
+      stripPrefix: false
+      timeout: 60000
+      sensitiveHeaders:
+
+    item-service:
+        path: /item-service/**
+        serviceId: kris5-item-service
+        stripPrefix: false
+        sensitiveHeaders:
+
+    xroad-service:
+        path: /xroad-service/**
+        serviceId: kris5-xroad-service
+        stripPrefix: false
+        sensitiveHeaders:
+
+server:
+  port: 4000

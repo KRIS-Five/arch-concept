@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: kris5-application-service
+  cloud:
+    config:
+      uri: http://167.99.33.74:8888
+      fail-fast: true
+      password: pass
+      username: user
