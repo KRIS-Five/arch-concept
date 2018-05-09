@@ -25,7 +25,6 @@ import {IconsComponent} from './icons/icons.component';
 import {MapsComponent} from './maps/maps.component';
 import {NotificationsComponent} from './notifications/notifications.component';
 import {UpgradeComponent} from './upgrade/upgrade.component';
-import { SpinnerModule } from "angular2-spinner/dist";
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
@@ -55,8 +54,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
         SidebarModule,
         RouterModule,
         AppRoutingModule,
-        LbdModule,
-        SpinnerModule
+        LbdModule
     ],
     providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
     bootstrap: [AppComponent]
