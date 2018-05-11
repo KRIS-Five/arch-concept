@@ -3,9 +3,12 @@ package ee.rik.kris5.application.service;
 import ee.rik.kris5.application.model.Decree;
 import ee.rik.kris5.application.model.Status;
 import ee.rik.kris5.application.model.StatusCounts;
+import ee.rik.kris5.application.model.StatusStatistic;
 import ee.rik.kris5.application.repository.DecreeRepository;
 import ee.rik.kris5.application.repository.ItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -22,7 +25,8 @@ public class DecreeService {
     private ItemRepository itemRepository;
 
     public List<Decree> getDecrees() {
-        return getCounts(decreeRepository.findAllByOrderByCreateDateDesc());
+        Pageable top = new PageRequest(0, 10);
+        return getCounts(decreeRepository.findAllByOrderByCreateDateDesc(top));
     }
 
     private List<Decree> getCounts(List<Decree> decrees) {
@@ -31,9 +35,24 @@ public class DecreeService {
 
         for (Decree decree : decrees) {
             StatusCounts counts = new StatusCounts();
-            counts.setActiveItems(itemRepository.countAllByDecreeIdAndStatusOrStatus(decree.getId(), Status.ACTIVE, Status.CLOSED));
-            counts.setFailedItems(itemRepository.countAllByDecreeIdAndStatus(decree.getId(), Status.FAILED));
-            counts.setReadyToProcessItems(itemRepository.countAllByDecreeIdAndStatus(decree.getId(), Status.READY_TO_PROCESS));
+
+            List<StatusStatistic> statistics = itemRepository.findStatistics(decree.getId());
+
+            for (StatusStatistic stat : statistics) {
+                if (stat.getStatus() == Status.ACTIVE) {
+                    counts.setActiveItems(counts.getActiveItems() + stat.getCount());
+                }
+                if (stat.getStatus() == Status.CLOSED) {
+                    counts.setActiveItems(counts.getActiveItems() + stat.getCount());
+                }
+                if (stat.getStatus() == Status.READY_TO_PROCESS) {
+                    counts.setReadyToProcessItems(stat.getCount());
+                }
+                if (stat.getStatus() == Status.FAILED) {
+                    counts.setFailedItems(stat.getCount());
+                }
+            }
+
             decree.setCounts(counts);
             if (decree.getFinalizedDate() != null) {
                 decree.setProcessingTime(getProcessingTime(getDateDiff(decree.getCreateDate(), decree.getFinalizedDate(), TimeUnit.SECONDS)));

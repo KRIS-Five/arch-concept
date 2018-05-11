@@ -6,6 +6,11 @@ public class StatusCounts {
     private Long failedItems;
     private Long readyToProcessItems;
 
+    public StatusCounts() {
+        this.activeItems = 0L;
+        this.failedItems = 0L;
+        this.readyToProcessItems = 0L;
+    }
 
     public Long getActiveItems() {
         return activeItems;

@@ -17,7 +17,7 @@ import java.math.BigInteger;
 @Component
 public class XroadClient extends WebServiceGatewaySupport {
 
-    @Value("xroad.host")
+    @Value("${xroad.host}")
     private String xroadHost;
 
     public ParinglihtV3Vastus getResponse() {
